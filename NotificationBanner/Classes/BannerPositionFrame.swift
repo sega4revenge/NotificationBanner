@@ -59,7 +59,7 @@ class BannerPositionFrame: NSObject {
         switch bannerPosition {
         case .bottom:
             return CGRect(x: edgeInsets.left,
-                          y: maxY,
+                          y: maxY + UIApplication.shared.statusBarFrame,
                           width: bannerWidth - edgeInsets.left - edgeInsets.right,
                           height: bannerHeight)
         case .top:
@@ -95,7 +95,7 @@ class BannerPositionFrame: NSObject {
                           height: startFrame.height)
         case .top:
             return CGRect(x: edgeInsets.left,
-                          y: edgeInsets.top,
+                          y: edgeInsets.top + + UIApplication.shared.statusBarFrame,
                           width: startFrame.width,
                           height: startFrame.height)
         }
