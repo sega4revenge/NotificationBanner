@@ -95,7 +95,7 @@ class BannerPositionFrame: NSObject {
                           height: startFrame.height)
         case .top:
             return CGRect(x: edgeInsets.left,
-                          y: edgeInsets.top + + UIApplication.shared.statusBarFrame,
+                          y: edgeInsets.top  + UIApplication.shared.statusBarFrame,
                           width: startFrame.width,
                           height: startFrame.height)
         }
